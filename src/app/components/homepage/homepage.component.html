@@ -1,0 +1,115 @@
+<main>
+    <div class="elements">
+        <img src="/assets/images/elements/a.svg" alt="">
+        <img src="/assets/images/elements/b.svg" alt="">
+        <img src="/assets/images/elements/c.svg" alt="">
+        <img src="/assets/images/elements/d.svg" alt="">
+        <img src="/assets/images/elements/e.svg" alt="">
+        <img src="/assets/images/elements/f.svg" alt="">
+    </div>
+    <div class="landing">
+        <h1>One stop solution <br> for learning and hiring</h1>
+        <div class="links">
+            <p><a href="">Technology training</a></p>
+            <p><a href="">Hiring assessments</a></p>
+            <p><a href="">Proctored exams</a></p>
+            <p><a href="">Campus placements</a></p>
+        </div>
+        <button>Request a demo</button>
+        <div class="cards">
+            <div [ngStyle]="{'background-color':item.background_color,'box-shadow':'0px 5px 16px'+item.background_color }"
+                *ngFor="let item of landingCards" class="card">
+                <h4>{{item.name}}</h4>
+                <ul>
+                    <li *ngFor="let point of item.points">{{point}}</li>
+                </ul>
+                <img [src]="item.img" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="assessment">
+        <div class="about">
+            <h2>Take the recruitment assessment <br> to the next level with our <br> platform</h2>
+            <p>Recruitment is not a cakewalk, and nobody understands this better than us. Over the years, we have
+                observed the need for campus hiring solution and come up with the best plan to find the right talent for
+                companies.</p>
+            <p>Xplore helps you transform your business by finding the perfect people - right from choosing the colleges
+                to efficiently training people once they are hired. Our expert team will help you at every step to
+                ensure seamless candidate experience.</p>
+        </div>
+        <div class="img">
+            <div class="imgHolder">
+                <img src="assets/images/meeting.jpg" alt="">
+                <img src="assets/images/meeting2.jpg" alt="">
+                <img src="assets/images/chart.jpg" alt="">
+                <img src="assets/images/elements/g.png" alt="">
+                <img src="assets/images/elements/b.svg" alt="">
+                <img src="assets/images/elements/pin.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="milestones">
+        <div *ngFor="let item of milestones" class="milestone">
+            <p>{{item.value}}</p>
+            <p>{{item.name}}</p>
+        </div>
+    </div>
+    <div class="challenges">
+        <h2>Address The Challenges</h2>
+        <div class="cards">
+            <div *ngFor="let  items of challenges" class="card">
+                <div class="name">
+                    <img [src]="items.img" alt="">
+                    <p>{{items.name}}</p>
+                </div>
+                <div class="about">
+                    <p>{{items.about}}</p>
+                </div>
+            </div>
+        </div>
+        <i class="fas fa-code"></i>
+    </div>
+    <div class="whyUs">
+        <h2>Why Choose Us?</h2>
+        <div class="holder">
+            <div class="column columnA">
+                <div [ngStyle]="{'background-color':item.bg}" *ngFor="let item of whyUs[0]" class="card">
+                    <h3>{{item.name}}</h3>
+                    <p>{{item.about}}</p>
+                </div>
+            </div>
+            <div class="column columnB">
+                <div [ngStyle]="{'background-color':item.bg}" *ngFor="let item of whyUs[1]" class="card">
+                    <h3>{{item.name}}</h3>
+                    <p>{{item.about}}</p>
+                </div>
+            </div>
+            <img src="assets/images/cards/whyUs/female.png" alt="">
+
+        </div>
+        <div class="holder">
+            <div class="column columnC">
+                <div [ngStyle]="{'background-color':item.bg}" *ngFor="let item of whyUs[2]" class="card">
+                    <h3>{{item.name}}</h3>
+                    <p>{{item.about}}</p>
+                </div>
+            </div>
+            <div class="column columnD">
+                <div [ngStyle]="{'background-color':item.bg}" *ngFor="let item of whyUs[3]" class="card">
+                    <h3>{{item.name}}</h3>
+                    <p>{{item.about}}</p>
+                </div>
+            </div>
+            <img src="assets/images/cards/whyUs/male.png" alt="">
+        </div>
+
+    </div>
+    <div class="colleges">
+        <h2>Trusted by 300+ organizations</h2>
+        <div class="icons">
+            <img *ngFor="let item of collages" [src]="item" alt="">
+        </div>
+        <p>Hire The Best From The Leading Colleges</p>
+        <button>Let's Connect</button>
+    </div>
+</main>

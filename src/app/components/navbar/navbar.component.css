@@ -1,0 +1,62 @@
+main{
+    display: flex;
+    padding:2% 10%;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 3;
+    transition: .4s;    
+}
+.logo{
+    height: 30px;
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+li{
+    float:left;
+    margin-left:100px;
+}
+li a{
+    text-align: center;
+    color: rgb(57, 57, 57);
+    text-decoration: none;
+    transition: .4s;
+    position: relative;
+}
+li a::before{
+    position: absolute;
+    width: 0%;
+    height:1.5px ;
+    border-radius:0 10px 10px 0  ;
+    background-color: #0062FF;
+    content: '';
+    bottom: 0;
+    left: 0;
+    transition: .4s;
+}
+li a:hover{
+    color: #0062FF;
+}   
+li a:hover::before{
+    width: 80%;
+}
+li button{
+    border: none;
+    border-radius: 10px 0 10px 0;
+    padding:10px 20px;
+    background: transparent linear-gradient(113deg, #0062FF 0%, #FF7373 100%) 0% 0% no-repeat padding-box;
+    color: white;
+    transition: .4s;
+}
+li button:hover{
+    border-radius: 0px 10px 0px 10px;
+    cursor:pointer;
+}
+
+
+
+
